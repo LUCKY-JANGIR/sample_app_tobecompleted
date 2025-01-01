@@ -37,7 +37,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex flex-wrap h-full overflow">
+    <div className="flex flex-wrap max-h-screen h-full overflow">
       <Customcursor />
 
       {pages.map((page, index) => (
@@ -48,7 +48,7 @@ export default function Page() {
             borderColor: "#d1d5db", // Default gray border color
           }}
           className={`self-center m-auto border-2 rounded-lg transition-all duration-300  flex items-center justify-center ${activeIndex === index
-            ? "fixed top-0 left-0 w-full h-full z-50 border-none rounded-none" // Full-screen styles for the clicked card
+            ? "fixed top-0 left-0 w-full h-full z-20 border-none rounded-none" // Full-screen styles for the clicked card
             : activeIndex !== null
               ? "hidden " // Hide other cards when one is active
               : "h-[45%] w-[45%]" // Grid styles for inactive cards

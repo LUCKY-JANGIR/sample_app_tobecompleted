@@ -13,6 +13,7 @@
     --foreground: #ededed;
   }
 }
+
 body::-webkit-scrollbar,.section-div::-webkit-scrollbar{
   display: none;
 }
@@ -23,7 +24,9 @@ body {
 }
 *{
   cursor: none;
+  transition: transform 0.5s ease-in-out;
 }
+
 
 
 
