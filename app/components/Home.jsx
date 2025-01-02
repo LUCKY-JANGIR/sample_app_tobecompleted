@@ -1,10 +1,10 @@
 "use client";
-import Image from "next/image";
-import img from "../../public/111122.jpg";
+
 import { useState, useEffect } from "react";
 import Contect from "./Contect";
 import About from "./About";
 import Projects from "./Projects";
+import Slide1 from "./Home/slide1";
 
 export default function Home() {
     const [start, setStart] = useState(false); // Toggle slideshow
@@ -12,23 +12,7 @@ export default function Home() {
 
     // Define slides with the components
     const slides = [
-        <div key="slide1" className="flex items-center justify-between h-full w-full">
-            <div>
-                <div className="uppercase font-sans">
-                    <span className="text-gray-500 font-bold font-mono">Web Developer</span>
-                    <div className="my-3">
-                        <p className="text-6xl text-zinc-400">hi! i am</p>
-                        <h1 className="text-6xl text-teal-400">mayank jangir</h1>
-                    </div>
-                </div>
-                <div className="text-zinc-400 font-mono">
-                    here we create some awesome web sites
-                </div>
-            </div>
-            <div className="h-[55vh] w-[55vh] rounded-full overflow-hidden flex items-center border-4 border-double border-teal-600 justify-center bg-slate-900">
-                <Image src={img} width={0} alt="img" height={0} className="h-full"></Image>
-            </div>
-        </div>,
+        <Slide1 key="slide1" />,
         <Contect key="slide2" />, // Contect component
         <About key="slide3" />,   // About component
         <Projects key="slide4" />, // Projects component
